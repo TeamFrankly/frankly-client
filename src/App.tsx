@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from "react-router";
+import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from "./pages/HomePage";
+import BottomNav from "./components/BottomNav";
+import CommunityPage from "./pages/community/CommunityPage";
+import LawmakerListPage from "./pages/lawmaker/LawmakerListPage";
+import UserPage from "./pages/UserPage";
+import WritePage from "./pages/community/WritePage";
+import PostPage from "./pages/community/PostPage";
+import BoardPage from "./pages/community/BoardPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/community/board/:boardName" element={<BoardPage />} />
+        <Route path="/community/board/:boardName/:postId" element={<PostPage />} />
+        <Route path="/community/write" element={<WritePage />} />
+        <Route path="/lawmaker" element={<LawmakerListPage />} />
+        <Route path="/user/:userId" element={<UserPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
+      </Routes>
+      <BottomNav />
+    </>
   );
 }
 
