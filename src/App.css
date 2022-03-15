@@ -1,3 +1,14 @@
+.wrap {
+    margin: 54px auto 0 auto;
+    max-width: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
 /*아이콘 버튼*/
 .icon-button-56 {
     width: 56px;

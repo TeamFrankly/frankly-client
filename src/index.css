@@ -12,6 +12,10 @@ button:disabled {cursor: default}
 :focus[data-focus-method=mouse]:not(input):not(textarea):not(select), :focus[data-focus-method=touch]:not(input):not(textarea):not(select) {outline: none}
 ::-moz-focus-inner {border: 0;padding: 0}
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
@@ -25,4 +29,5 @@ body {
   letter-spacing: -0.025rem;
   line-height: 130%;
   overflow-x: hidden;
+
 }

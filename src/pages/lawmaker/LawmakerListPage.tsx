@@ -2,12 +2,10 @@ import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 
 const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 `;
 
-function LawmakerListPage() {
+const LawmakerListPage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
 
   useEffect(() => {
@@ -15,11 +13,9 @@ function LawmakerListPage() {
   }, [])
 
   return (
-    <>
-      <Main>
-        여기는 국회의원 메인
-      </Main>
-    </>
+    <div className="wrap">
+      여기는 국회의원 메인
+    </div>
   );
 }
 

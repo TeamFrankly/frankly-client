@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `;
 
-function CommunityPage() {
+const CommunityPage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
 
   useEffect(() => {
@@ -16,14 +13,11 @@ function CommunityPage() {
   }, [])
 
   return (
-    <>
-      <Main>
-        여기는 커뮤니티 메인
-      </Main>
+    <div className="wrap">
+      <p>여기는 커뮤니티 메인</p>
       <Link to="/community/board/자유-게시글">자유 게시글</Link>
-    </>
+    </div>
   );
 }
-
 
 export default CommunityPage;

@@ -39,7 +39,7 @@ const HeaderCommunityStyle = styled(Header)`
   }
 `;
 
-export function HeaderLogo() {
+export const HeaderLogo: React.FunctionComponent = () => {
   return (
     <HeaderLogoStyle>
       <h1>Frankly</h1>

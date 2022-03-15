@@ -8,7 +8,7 @@ const Main = styled.div`
   justify-content: center;
 `;
 
-function BoardPage() {
+const BoardPage: React.FunctionComponent = () => {
   let { boardName } = useParams();
 
   useEffect(() => {
@@ -16,12 +16,10 @@ function BoardPage() {
   }, [])
 
   return (
-    <>
-      <Main>
-        여기는 [{boardName?.replace(/-/g, ' ')}]게시판 페이지
-      </Main>
+    <div className="wrap">
+      여기는 [{boardName?.replace(/-/g, ' ')}]게시판 페이지
       <Link to="22">글 22번</Link>
-    </>
+    </div>
   );
 }
 

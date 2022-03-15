@@ -1,22 +1,22 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 
-const Main = styled.div`
-`;
-
-const WritePage: React.FunctionComponent = () => {
+function SearchPage() {
   const [state, setState] = useState<string>("");
 
   useEffect(() => {
-    console.log("WritePage");
+    console.log("SearchPage");
   }, [])
 
   return (
-    <div className="wrap">
-      글쓰기 페이지
+    <div>
+      여기는 검색 페이지
     </div>
   );
 }
 
+const Main = styled.div`
 
-export default WritePage;
+`;
+
+export default SearchPage;

@@ -1,19 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {HeaderLogo} from "../components/Header";
+import {Link} from "react-router-dom";
+import SearchInput from "../components/SearchInput";
 
-const Main = styled.div`
-  margin: 54px auto 0 auto;
-  max-width: 540px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex-grow: 1;
-  flex-direction: column;
-`;
-
-function HomePage() {
+const HomePage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
 
   useEffect(() => {
@@ -21,13 +12,18 @@ function HomePage() {
   }, [])
 
   return (
-    <>
+    <div className="wrap">
       <HeaderLogo />
-      <Main>
-        여기는 홈
-      </Main>
-    </>
+      <Slider />
+      <SearchInput />
+    </div>
   );
 }
+
+const Slider = styled.div`
+  width: 100%;
+  height: 180px;
+  background-color: #A9A9A9;
+`;
 
 export default HomePage;

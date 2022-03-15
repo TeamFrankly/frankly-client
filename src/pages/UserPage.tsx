@@ -3,12 +3,10 @@ import styled from "styled-components";
 import {useParams} from "react-router-dom";
 
 const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 `;
 
-function UserPage() {
+const UserPage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
   let { userId } = useParams();
 
@@ -17,11 +15,9 @@ function UserPage() {
   }, [])
 
   return (
-    <>
-      <Main>
-        {userId} 유저 정보 페이지
-      </Main>
-    </>
+    <div className="wrap">
+      {userId} 유저 정보 페이지
+    </div>
   );
 }
 
