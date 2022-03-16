@@ -9,6 +9,26 @@
     flex-direction: column;
 }
 
+.content-title {
+    margin-left: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content-title h2 {
+    font-size: 1.8rem;
+    color: #2B2B2B;
+}
+.content-title h3 {
+    font-size: 1.6rem;
+    color: #2B2B2B;
+}
+.content-title > div {
+    display: flex;
+    align-items: center;
+}
+
 /*아이콘 버튼*/
 .icon-button-56 {
     width: 56px;
