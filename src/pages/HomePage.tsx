@@ -4,7 +4,9 @@ import {HeaderLogo} from "../components/Header";
 import {Link} from "react-router-dom";
 import SearchInput from "../components/SearchInput";
 import SearchRedIcon from "../assets/icons/Search_red.svg";
+import BookMarkBlueIcon from "../assets/icons/Bookmark_blue.svg";
 import ContentTitle from "../components/home/ContentTitle";
+import NationalAssemblySchedule from "../components/home/NationalAssemblySchedule";
 
 const HomePage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
@@ -32,11 +34,14 @@ const HomePage: React.FunctionComponent = () => {
             <p>정진석</p>
           </li>
         </LawmakerGrid>
+      </Container>
+      <Container>
         <ContentTitle
-          iconName={SearchRedIcon}
+          iconName={BookMarkBlueIcon}
           title="오늘 국회 일정"
-          moreViewLink="test"
+          moreViewLink="test/test"
         />
+        <NationalAssemblySchedule />
       </Container>
     </div>
   );

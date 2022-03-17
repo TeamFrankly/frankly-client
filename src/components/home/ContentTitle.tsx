@@ -5,20 +5,18 @@ import {Link} from "react-router-dom";
 interface ContentTitleProps {
   iconName: string;
   title: string;
-  moreViewLink: string | null;
+  moreViewLink: string | undefined | null;
 }
 
 const ContentTitle: React.FC<ContentTitleProps> = ({iconName, title, moreViewLink}) => {
+  console.log(moreViewLink);
   return (
     <Main>
       <div>
-        <img src={iconName} alt="인기 검색 국회의원" />
+        <img src={iconName} alt={title} />
         <h3>{title}</h3>
       </div>
-      {moreViewLink
-        ? <DetailLink to={moreViewLink}>더보기</DetailLink>
-        : null
-      }
+      {moreViewLink && <DetailLink to={moreViewLink}>더보기</DetailLink>}
     </Main>
   );
 }
@@ -51,4 +49,4 @@ const DetailLink = styled(Link)`
   }
 `;
 
-export default ContentTitle;
+export default React.memo(ContentTitle);

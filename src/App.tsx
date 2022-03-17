@@ -18,8 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
-        <Route path="/community/board/:boardName" element={<BoardPage />} />
-        <Route path="/community/board/:boardName/:postId" element={<PostPage />} />
+        <Route path="/community/:boardName" element={<BoardPage />} />
+        <Route path="/community/:boardName/:postId" element={<PostPage />} />
         <Route path="/community/write" element={<WritePage />} />
         <Route path="/lawmaker" element={<LawmakerListPage />} />
         <Route path="/lawmaker/search" element={<SearchPage />} />
