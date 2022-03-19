@@ -18,13 +18,13 @@ const CommunityPage: React.FunctionComponent = () => {
         <h4>일반 커뮤니티</h4>
         <ul>
           <li>
-            <Link to="" className="board-name">
+            <Link to="/community/인기게시글" className="board-name">
               <img src={PinIcon} alt="" />
               인기게시글
             </Link>
           </li>
           <li>
-            <Link to="" className="board-name">
+            <Link to="/community/자유게시판" className="board-name">
               <img src={PinIcon} alt="" />
               자유게시판
             </Link>
@@ -49,18 +49,18 @@ const CommunityPage: React.FunctionComponent = () => {
         </ul>
       </CommunityList>
       <CommunityList>
-        <h4>일반 커뮤니티</h4>
+        <h4>내 기록</h4>
         <ul>
           <li>
             <Link to="" className="board-name">
               <img src={PinIcon} alt="" />
-              인기게시글
+              내가 쓴 글
             </Link>
           </li>
           <li>
             <Link to="" className="board-name">
               <img src={PinIcon} alt="" />
-              자유게시판
+              내가 쓴 댓글
             </Link>
           </li>
         </ul>

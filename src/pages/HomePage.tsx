@@ -7,10 +7,9 @@ import SearchRedIcon from "../assets/icons/Search_red.svg";
 import BookMarkBlueIcon from "../assets/icons/Bookmark_blue.svg";
 import ContentTitle from "../components/home/ContentTitle";
 import NationalAssemblySchedule from "../components/home/NationalAssemblySchedule";
+import LawmakerList from "../components/lawmaker/LawmakerList";
 
 const HomePage: React.FunctionComponent = () => {
-  const [state, setState] = useState<string>("");
-
   useEffect(() => {
     console.log("HomePage");
   }, [])
@@ -26,14 +25,9 @@ const HomePage: React.FunctionComponent = () => {
           title="인기 검색 국회의원 TOP 4"
           moreViewLink=""
         />
-        <LawmakerGrid>
-          <li>
-            <div className="lawmaker-list__image">
-              <img src="" alt="사진" />
-            </div>
-            <p>정진석</p>
-          </li>
-        </LawmakerGrid>
+        <LawmakerList
+
+        />
       </Container>
       <Container>
         <ContentTitle
@@ -56,36 +50,6 @@ const Slider = styled.div`
 const Container = styled.div`
   padding: 0 0 24px;
   width: 100%;
-`;
-
-const LawmakerGrid = styled.ul`
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  li {
-    margin: 8px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #2B2B2B;
-    p {
-      font-weight: 500;
-      font-size: 1.6rem;
-    }
-    .lawmaker-list__image {
-      margin-bottom: 4px;
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 1px solid #d9d9d9;
-      overflow: hidden;
-      > img {
-        width: 64px;
-      }
-    }
-  }
-  @media screen and (max-width: 430px) { grid-template-columns: repeat(4, 1fr); }
-  @media screen and (max-width: 348px) { grid-template-columns: repeat(3, 1fr); }
 `;
 
 export default HomePage;

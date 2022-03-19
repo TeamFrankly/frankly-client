@@ -5,12 +5,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 import HomePage from "./pages/HomePage";
 import BottomNav from "./components/BottomNav";
 import CommunityPage from "./pages/community/CommunityPage";
-import LawmakerListPage from "./pages/lawmaker/LawmakerListPage";
-import UserPage from "./pages/UserPage";
+import LawmakerHomePage from "./pages/lawmaker/LawmakerHomePage";
+import UserPage from "./pages/user/UserPage";
 import WritePage from "./pages/community/WritePage";
 import PostPage from "./pages/community/PostPage";
 import BoardPage from "./pages/community/BoardPage";
 import SearchPage from "./pages/lawmaker/SearchPage";
+import LawmakerProfilePage from "./pages/lawmaker/LawmakerProfilePage";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path="/community/:boardName" element={<BoardPage />} />
         <Route path="/community/:boardName/:postId" element={<PostPage />} />
         <Route path="/community/write" element={<WritePage />} />
-        <Route path="/lawmaker" element={<LawmakerListPage />} />
+        <Route path="/lawmaker" element={<LawmakerHomePage />} />
+        <Route path="/lawmaker/:lawmakerId" element={<LawmakerProfilePage />} />
         <Route path="/lawmaker/search" element={<SearchPage />} />
         <Route path="/user/:userId" element={<UserPage />} />
         <Route path="/*" element={<NotFoundPage />} />

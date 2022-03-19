@@ -3,17 +3,16 @@ import styled from "styled-components";
 import {Link} from "react-router-dom";
 
 interface ContentTitleProps {
-  iconName: string;
   title: string;
+  iconName: string | undefined | null;
   moreViewLink: string | undefined | null;
 }
 
-const ContentTitle: React.FC<ContentTitleProps> = ({iconName, title, moreViewLink}) => {
-  console.log(moreViewLink);
+const ContentTitle: React.FC<ContentTitleProps> = ({title, iconName,moreViewLink}) => {
   return (
     <Main>
       <div>
-        <img src={iconName} alt={title} />
+        {iconName && <img src={iconName} alt={title} />}
         <h3>{title}</h3>
       </div>
       {moreViewLink && <DetailLink to={moreViewLink}>더보기</DetailLink>}
@@ -27,12 +26,8 @@ const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  h2 {
-    font-size: 1.8rem;
-    color: #2B2B2B;
-  }
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: #2B2B2B;
   }
   > div {
