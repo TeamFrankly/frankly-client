@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Route, Routes} from "react-router";
+import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from "./pages/HomePage";
+import BottomNav from "./components/BottomNav";
+import CommunityPage from "./pages/community/CommunityPage";
+import LawmakerHomePage from "./pages/lawmaker/LawmakerHomePage";
+import UserPage from "./pages/user/UserPage";
+import WritePage from "./pages/community/WritePage";
+import PostPage from "./pages/community/PostPage";
+import BoardPage from "./pages/community/BoardPage";
+import SearchPage from "./pages/lawmaker/SearchPage";
+import LawmakerProfilePage from "./pages/lawmaker/LawmakerProfilePage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/community/:boardName" element={<BoardPage />} />
+        <Route path="/community/:boardName/:postId" element={<PostPage />} />
+        <Route path="/community/write" element={<WritePage />} />
+        <Route path="/lawmaker" element={<LawmakerHomePage />} />
+        <Route path="/lawmaker/:lawmakerId" element={<LawmakerProfilePage />} />
+        <Route path="/lawmaker/search" element={<SearchPage />} />
+        <Route path="/user/:userId" element={<UserPage />} />
+        <Route path="/*" element={<NotFoundPage />} />
+      </Routes>
+      <BottomNav />
+    </>
   );
 }
 

@@ -11,6 +11,12 @@ button:disabled {cursor: default}
 :focus {outline: 4px solid rgba(0, 125, 250, .6);outline-offset: 1px}
 :focus[data-focus-method=mouse]:not(input):not(textarea):not(select), :focus[data-focus-method=touch]:not(input):not(textarea):not(select) {outline: none}
 ::-moz-focus-inner {border: 0;padding: 0}
+ul, ol {list-style:none;}
+a {text-decoration: none;}
+
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 10px;
