@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import {useParams} from "react-router-dom";
-import {HeaderBack} from "../../components/Header";
+import {HeaderProfile} from "../../components/Header";
 
 const UserPage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
@@ -13,9 +13,7 @@ const UserPage: React.FunctionComponent = () => {
 
   return (
     <div className="wrap">
-      <HeaderBack
-        title="내 정보"
-      />
+      <HeaderProfile />
       {userId} 유저 정보 페이지
     </div>
   );

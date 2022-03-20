@@ -9,7 +9,7 @@ import ContentTitle from "../components/home/ContentTitle";
 import NationalAssemblySchedule from "../components/home/NationalAssemblySchedule";
 import LawmakerList from "../components/lawmaker/LawmakerList";
 
-const HomePage: React.FunctionComponent = () => {
+const HomePage: React.FC = () => {
   useEffect(() => {
     console.log("HomePage");
   }, [])

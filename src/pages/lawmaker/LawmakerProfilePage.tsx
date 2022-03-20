@@ -15,6 +15,7 @@ const LawmakerProfilePage: React.FunctionComponent = () => {
     <div className="wrap">
       <HeaderBack 
         title="국회의원"
+        backTo=""
       />
       {lawmakerId}번 국회의원 프로필 페이지
     </div>

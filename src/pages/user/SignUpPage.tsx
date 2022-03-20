@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 
-const Login: React.FunctionComponent = () => {
+const SignUpPage: React.FunctionComponent = () => {
   const [state, setState] = useState<string>("");
 
   useEffect(() => {
-    console.log("Login");
+    console.log("SignUpPage");
   }, [])
 
   return (
     <div>
-      로그인 페이지
+      회원가입 페이지
     </div>
   );
 }
@@ -19,4 +19,4 @@ const Main = styled.div`
 
 `;
 
-export default Login;
+export default SignUpPage;
