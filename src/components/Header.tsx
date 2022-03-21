@@ -74,7 +74,7 @@ export const HeaderCommunity: React.FunctionComponent = () => {
   return (
     <HeaderCommunityStyle>
       <h2>커뮤니티</h2>
-      <Link to="" className="icon-button-56">
+      <Link to="/community/notice" className="icon-button-56">
         <img src={BullhornIcon} alt="공지사항"/>
       </Link>
     </HeaderCommunityStyle>

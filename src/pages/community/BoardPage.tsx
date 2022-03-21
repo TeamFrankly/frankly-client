@@ -17,7 +17,7 @@ const BoardPage: React.FunctionComponent = () => {
     <div className="wrap">
       <HeaderBack
         title={boardName?.replace(/-/g, ' ')}
-        backTo=""
+        backTo="/community"
       />
       <PostList />
       <WriteButton to="write">
@@ -26,10 +26,6 @@ const BoardPage: React.FunctionComponent = () => {
     </div>
   );
 }
-
-const Main = styled.div`
-
-`;
 
 const WriteButton = styled(Link)`
   position: fixed;

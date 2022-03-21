@@ -12,6 +12,7 @@ import PostPage from "./pages/community/PostPage";
 import BoardPage from "./pages/community/BoardPage";
 import SearchPage from "./pages/lawmaker/SearchPage";
 import LawmakerProfilePage from "./pages/lawmaker/LawmakerProfilePage";
+import NoticePage from "./pages/community/NoticePage";
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/community/notice" element={<NoticePage />} />
         <Route path="/community/:boardName" element={<BoardPage />} />
         <Route path="/community/:boardName/:postId" element={<PostPage />} />
-        <Route path="/community/write" element={<WritePage />} />
+        <Route path="/community/:boardName/write" element={<WritePage />} />
         <Route path="/lawmaker" element={<LawmakerHomePage />} />
         <Route path="/lawmaker/:lawmakerId" element={<LawmakerProfilePage />} />
         <Route path="/lawmaker/search" element={<SearchPage />} />

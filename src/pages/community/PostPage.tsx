@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
 import {useParams} from "react-router-dom";
-import {HeaderPost} from "../../components/Header";
+import {HeaderBack, HeaderPost} from "../../components/Header";
 
 const Main = styled.div`
 
@@ -17,7 +17,10 @@ const PostPage: React.FunctionComponent = () => {
 
   return (
     <div className="wrap">
-      <HeaderPost />
+      <HeaderBack
+        title={boardName?.replace(/-/g, ' ')}
+        backTo=""
+      />
       [{boardName}] 게시판의 글 번호 : [{postId}]번 글
     </div>
   );
