@@ -9,27 +9,11 @@ export interface LawmakerEntity {
 }
 
 export interface LawmakerListProps {
-
+  list: LawmakerEntity[];
 }
 
-const LawmakerList: React.FunctionComponent<LawmakerListProps> = (props) => {
-  const list = [
-    {
-      id: 2,
-      name: "이진석",
-      img: "../"
-    },
-    {
-      id: 3,
-      name: "정진석",
-      img: "../"
-    },
-    {
-      id: 4,
-      name: "홍준표",
-      img: "../"
-    }
-  ]
+const LawmakerList: React.FunctionComponent<LawmakerListProps> = ({list}) => {
+
   return (
     <LawmakerGrid>
       {list?.map(item => (

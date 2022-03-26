@@ -10,6 +10,23 @@ import NationalAssemblySchedule from "../components/home/NationalAssemblySchedul
 import LawmakerList from "../components/lawmaker/LawmakerList";
 
 const HomePage: React.FC = () => {
+  const list = [
+    {
+      id: 2,
+      name: "이진석",
+      img: "../"
+    },
+    {
+      id: 3,
+      name: "정진석",
+      img: "../"
+    },
+    {
+      id: 4,
+      name: "홍준표",
+      img: "../"
+    }
+  ]
   useEffect(() => {
     console.log("HomePage");
   }, [])
@@ -26,7 +43,7 @@ const HomePage: React.FC = () => {
           moreViewLink=""
         />
         <LawmakerList
-
+          list={list}
         />
       </Container>
       <Container>

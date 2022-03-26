@@ -7,8 +7,27 @@ import LawmakerTitle from "../../components/lawmaker/LawmakerTitle";
 import LawmakerList from "../../components/lawmaker/LawmakerList";
 
 const LawmakerHomePage: React.FunctionComponent = () => {
-
+  const list = [
+    {
+      id: 2,
+      name: "이진석",
+      img: "../"
+    },
+    {
+      id: 3,
+      name: "정진석",
+      img: "../"
+    },
+    {
+      id: 4,
+      name: "홍준표",
+      img: "../"
+    }
+  ]
   useEffect(() => {
+    fetch("http://teamfrankly.kr/api/infos/all")
+      .then(res => res.json())
+      .then(data => console.log(JSON.stringify(data)));
     console.log("LawmakerHomePage");
   }, [])
 
@@ -24,7 +43,9 @@ const LawmakerHomePage: React.FunctionComponent = () => {
       <LawmakerTitle
         title="경기도 국회의원"
       />
-      <LawmakerList />
+      <LawmakerList
+        list={list}
+      />
     </Main>
   );
 }
